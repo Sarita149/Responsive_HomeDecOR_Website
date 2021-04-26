@@ -11,17 +11,16 @@
     }
 }
 
-.collapse {
-    /* display:flex;
-    flex-direction: row; */
+/* .collapse {
+    display:flex;
+    flex-direction: row;
     justify-content: space-between;
-}
+} */
 .navbar{
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 999;
-    padding: 1rem;
 }
 .brand .logo{
     padding: .5rem;

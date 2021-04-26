@@ -1,0 +1,27 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.page-footer .f-content .col .item a{
+    color: black;
+}
+
+.contain .site-content .page-footer .row .col .item ul li a{
+    text-decoration-line: none;
+    transition: all 0.2s linear;
+}
+.contain .site-content .page-footer .row .col .item ul li:hover a{
+    color: #d08124;
+    transform: scale(1.5);
+}
+@media screen and (max-width: 700px) {
+    .page-footer .row{
+        height: 100vh;
+    }
+    .row{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: initial;
+    }
+}

@@ -21,11 +21,14 @@ export class LandingPageComponent implements OnInit {
     {'id':7,'img':'../../../assets/sec2_img7.png','title':'URLI DECOR','small':'Shop Now'},
     {'id':8,'img':'../../../assets/sec2_img8.png','title':'NEW ARRIVALS','small':'Shop Now'},
   ]
-
-  itemsPerSlide = 3;
+  itemsPerSlide = 1;
   singleSlideOffset = true;
-  noWrap = true;
+  noWrap = false;
  
+  slidesChangeMessage = '';
+  onSlideRangeChange(indexes: number[]): void {
+    this.slidesChangeMessage = `Slides have been switched: ${indexes}`;
+  } 
   slides = [
     {image: "../../../assets/Best_Item1.jpg"},
     {image: "../../../assets/Best_Item2.jpg"},
