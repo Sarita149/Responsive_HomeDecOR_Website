@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './allComponents/nav-bar/nav-bar.component';
 import { LandingPageComponent } from './allComponents/landing-page/landing-page.component';
 import { FooterComponent } from './allComponents/footer/footer.component';
+import { ProductsComponent } from './allComponents/products/products.component';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LandingPageComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
