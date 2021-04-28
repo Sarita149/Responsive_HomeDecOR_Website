@@ -24,14 +24,21 @@ a{
     top: 0;
     z-index: 999;
 }
-.brand .logo{
+.brand .logo{   
     padding: .5rem;
     font-size: 3rem;
     font-weight: 900;
     font-family: poppins;
 }
+.collapse {
+    width: 80%;
+}
+.collapse form{
+    width: 20%;
+}
 .collapse .navbar-nav .nav-item{
-    font-size: 20px;
+    font-size: 18px;
+
 }
 .collapse .navbar-nav .nav-item .active{
     color: orange;

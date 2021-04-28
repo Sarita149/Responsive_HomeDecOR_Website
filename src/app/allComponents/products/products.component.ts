@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FilterPipe } from 'src/app/Pipes/filter.pipe';
 import { HelperService } from 'src/app/services/helper.service';
 
@@ -9,7 +9,7 @@ import { HelperService } from 'src/app/services/helper.service';
 })
 export class ProductsComponent implements OnInit {
   constructor(private helpservice :HelperService) { }
-   
+  fixed_category:boolean =false;
   // bestItem=[
   //   {'id':1,'img':'../../../assets/product_List/pro1.jpg','title':'Decor','price':'1,525'},
   //   {'id':2,'img':'../../../assets/product_List/pro2.jpg','title':'Decor','price':'1,399'},
@@ -46,6 +46,18 @@ export class ProductsComponent implements OnInit {
 
   resultarray:any;
   
+  @HostListener("document:scroll")
+  scrollfunction(){
+    if(window.scrollY >= 500 && window.scrollY <= 800  ){
+      this.fixed_category=true;
+      console.log('true'); 
+    }else{
+      this.fixed_category=false;
+      console.log('false'); 
+
+    }
+  }
+
   filterdata(name){
     this.helpservice.setfilterdata(name);
     // this.resultarray = this.bestItem.filter((item)=>{
@@ -59,5 +71,6 @@ export class ProductsComponent implements OnInit {
       this.resultarray = res;
       console.log(this.resultarray);
     })
+    // console.log(window.scrollY );
   }
 }
