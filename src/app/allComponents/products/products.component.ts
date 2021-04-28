@@ -9,8 +9,7 @@ import { FilterPipe } from 'src/app/Pipes/filter.pipe';
 export class ProductsComponent implements OnInit {
   result:string;
   constructor() { }
-  ngOnInit(): void {
-  }
+  
   // name:string='';  
    
   bestItem=[
@@ -50,12 +49,13 @@ export class ProductsComponent implements OnInit {
   resultarray:any;
   
   filterdata(name){
-    this.result =name
+    this.result =name;
     this.resultarray = this.bestItem.filter((item)=>{
       return item.title == name;
     })
     console.log(this.resultarray);
     
   }
-
+  ngOnInit(): void {
+  }
 }
