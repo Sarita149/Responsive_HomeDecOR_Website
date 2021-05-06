@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { FilterPipe } from 'src/app/Pipes/filter.pipe';
+// import { FilterPipe } from 'src/app/Pipes/filter.pipe';
 import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
@@ -48,7 +48,7 @@ export class ProductsComponent implements OnInit {
   
   @HostListener("document:scroll")
   scrollfunction(){
-    if(window.scrollY >= 500 && window.scrollY <= 800  ){
+    if(window.scrollY >= 500 && window.scrollY <= 950  ){
       this.fixed_category=true;
       console.log('true'); 
     }else{

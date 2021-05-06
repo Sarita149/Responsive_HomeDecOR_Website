@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "responsive-homedecor": {
+      "hosting": {
+        "HomeDecor": [
+          "responsive-homedecor"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "responsive-homedecor"
+  }
+}
