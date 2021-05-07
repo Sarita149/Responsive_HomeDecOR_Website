@@ -1,4 +1,122 @@
-@media screen and(min-width:768px) {
+*{
+    box-sizing: border-box;
+}
+
+html body{
+    overflow-x: hidden ;
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+}
+.header .brand{
+    margin-left: 2rem;
+}
+.header .brand .logo{  
+    color: black; 
+    padding: .5rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: poppins;
+    text-decoration: none;
+}
+.header .headerContent{
+    display: flex;
+    justify-content: center;
+}
+
+.header .headerContent a{
+    margin: 10px;
+}
+.header .headerContent form{
+    display: flex;
+    margin: 0.5rem;
+}
+
+#sidebarMenu{
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    margin-top: 60px;
+    background: #2e86de;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+}
+
+#openSidebarMenu:checked ~ #sidebarMenu{
+    transform: translateX(0px);
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+.nav-item{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.nav-item a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+
+.sidebarIconToggle{
+    width: 22px;
+    height: 22px;
+    position: fixed;
+    z-index: 10;
+    top: 22px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.spinner{
+    height: 3px;
+    background: black;
+    transition: all 0.3s;
+}
+
+.middle , .bottom{
+    margin-top: 3px;
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .middle{
+    opacity: 0;
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .top{
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .bottom{
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+
+
+
+@media(min-width:768px) {
     .brand{
         width: 30%;        
     }
@@ -24,12 +142,7 @@ a{
     top: 0;
     z-index: 999;
 }
-.brand .logo{   
-    padding: .5rem;
-    font-size: 3rem;
-    font-weight: 900;
-    font-family: poppins;
-}
+
 .collapse {
     width: 80%;
 }
@@ -43,3 +156,8 @@ a{
 .collapse .navbar-nav .nav-item .active{
     color: orange;
 }
+
+
+
+
+
