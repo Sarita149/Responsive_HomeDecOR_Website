@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ModalModule } from 'ngx-bootstrap/modal';
+// import { ModalModule } from 'ngx-bootstrap';
 // import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +25,7 @@ import { FilterPipe } from './Pipes/filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ModalModule.forRoot(),
     // CarouselModule.forRoot()
     CarouselModule 
   ],

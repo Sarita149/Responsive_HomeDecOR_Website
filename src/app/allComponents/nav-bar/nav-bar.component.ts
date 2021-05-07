@@ -8,10 +8,14 @@ import { HelperService } from 'src/app/services/helper.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-
-  constructor(private helpservice:HelperService , private routes : Router) { }
+  searchbar:boolean = false;
   resultarray:any;
+  constructor(private helpservice:HelperService , private routes : Router) { }
   
+  showSearchBar(){
+    this.searchbar =!this.searchbar
+  }
+
   filterdata(name){
     this.helpservice.setfilterdata(name); 
     this.routes.navigate(['product'])
