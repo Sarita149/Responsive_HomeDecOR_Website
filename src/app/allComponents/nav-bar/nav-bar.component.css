@@ -37,14 +37,18 @@ body{
     justify-content: center;
 }
 
-.header .headerContent a{
-    margin: 10px;
+.header .headerContent  a{
+    margin: 13px;
+    margin-left: 0;
 }
 .header .headerContent form{
     display: flex;
     margin: 0.5rem;
 }
 
+.header .headerContent .login{
+    margin: .5rem;
+}
 #sidebarMenu{
     height: 100%;
     position: fixed;
