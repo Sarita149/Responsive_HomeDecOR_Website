@@ -3,8 +3,8 @@
 }
 
 html body{
-    overflow-x: hidden ;
-    height: 100%;
+    /* overflow-x: hidden ; */
+    /* height: 100%; */
 }
 
 body{
@@ -25,10 +25,11 @@ body{
     margin-left: 2rem;
 }
 .header .brand .logo{  
-    color: black; 
+    color: peru; 
     padding: .5rem;
     font-size: 2.5rem;
     font-weight: 900;
+    font-style: italic;
     font-family: poppins;
     text-decoration: none;
 }
@@ -46,6 +47,7 @@ body{
     margin: 0.5rem;
 }
 
+
 .header .headerContent .login{
     margin: .5rem;
 }
@@ -56,9 +58,10 @@ body{
     top: 0;
     width: 250px;
     margin-top: 60px;
-    background: #2e86de;
+    background: peru;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
+    z-index: 10;
 }
 
 #openSidebarMenu:checked ~ #sidebarMenu{
@@ -117,7 +120,10 @@ body{
     margin-top: -9px;
 }
 
+@media(min-width:200px)and (max-width:500px) {
 
+        
+}
 
 
 @media(min-width:768px) {
@@ -131,7 +137,14 @@ body{
     .collapse .search{
         width: 30%;
     }
+    
 }
+@media(max-width:720px) {
+    .header .headerContent #inp{
+        display: none;
+    }
+}
+
 a{
     cursor: pointer;
 }
