@@ -63,7 +63,24 @@ body{
     transition: transform 250ms ease-in-out;
     z-index: 10;
 }
-
+#sidebarMenu ul li a:hover{
+    color: saddlebrown;
+    background: #fff;
+    border-left-color: saddlebrown;
+}
+#sidebarMenu ul ul{
+    position: static;
+    display: none;
+}
+#sidebarMenu ul ul li{
+    line-height:31px;
+    border-bottom: none; 
+}
+#sidebarMenu ul ul li a{
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 50px;
+}
 #openSidebarMenu:checked ~ #sidebarMenu{
     transform: translateX(0px);
 }
@@ -82,7 +99,8 @@ body{
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 15px;
+    border-left: 5px solid transparent;
 }
 
 
