@@ -48,7 +48,7 @@ export class ProductsComponent implements OnInit {
   
   @HostListener("document:scroll")
   scrollfunction(){
-    if(window.scrollY >= 500 && window.scrollY <= 950  ){
+    if(window.scrollY >= 390 && window.scrollY <= 790  ){
       this.fixed_category=true;
       console.log('true'); 
     }else{

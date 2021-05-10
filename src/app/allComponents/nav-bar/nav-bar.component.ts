@@ -9,7 +9,7 @@ import { HelperService } from 'src/app/services/helper.service';
 })
 export class NavBarComponent implements OnInit {
   searchbar:boolean = false;
-  showCategoryList:boolean=true;
+  showCategoryList:boolean = false;
   resultarray:any;
   constructor(private helpservice:HelperService , private routes : Router) { }
   

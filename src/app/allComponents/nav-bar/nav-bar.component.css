@@ -68,9 +68,14 @@ body{
     background: #fff;
     border-left-color: saddlebrown;
 }
+#sidebarMenu ul ul li a:hover{
+    color: saddlebrown;
+    background: #fff;
+    border-left-color: saddlebrown;
+}
 #sidebarMenu ul ul{
     position: static;
-    display: none;
+    /* display: none; */
 }
 #sidebarMenu ul ul li{
     line-height:31px;
