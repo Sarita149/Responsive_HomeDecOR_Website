@@ -51,8 +51,8 @@
       </div>
       <div class="headerContent">
         <form >
-          <input class="form-control me-2" id="inp" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn" type="submit"><i class="fa fa-2x fa-search" aria-hidden="true"></i></button>
+          <input *ngFor="" class="form-control me-2" id="inp" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn" type="submit" (click)="filterdata('')"><i class="fa fa-2x fa-search" aria-hidden="true"></i></button>
         </form>
         <!-- <a style =" padding-right: 1rem;" (click)="showSearchBar()"><i class="fa fa-2x fa-search" aria-hidden="true"></i></a> -->
         <a aria-current="page"><i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i></a>
@@ -72,7 +72,7 @@
           <a class="nav-link"  aria-current="page" routerLink="">Home </a>
         </li>
         <li class="nav-item" id="cat">
-          <a class="nav-link "  routerLink="product" (click)="showCat()" aria-current="page"> All Categories</a>
+          <a class="nav-link "  (click)="showCat()" aria-current="page"> All Categories</a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="showCategoryList==true">
             <li class="nav-item cat">
               <a class="nav-link " aria-current="page" (click)="filterdata('lanterns')">Lanterns  </a>

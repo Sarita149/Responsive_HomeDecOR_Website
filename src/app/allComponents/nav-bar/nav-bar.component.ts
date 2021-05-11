@@ -12,7 +12,7 @@ export class NavBarComponent implements OnInit {
   showCategoryList:boolean = false;
   resultarray:any;
   constructor(private helpservice:HelperService , private routes : Router) { }
-  
+
   showCat(){
     this.showCategoryList = !this.showCategoryList
   }

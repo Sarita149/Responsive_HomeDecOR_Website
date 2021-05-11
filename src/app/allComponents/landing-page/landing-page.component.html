@@ -56,14 +56,15 @@
                     <h2>Festured Products</h2>
                 
                 <carousel class="carousel" [itemsPerSlide]="itemsPerSlide"
-              [singleSlideOffset]="singleSlideOffset"
-              [noWrap]="!noWrap"
-              [interval]="false"
-              [startFromIndex]="2"
-              (slideRangeChange)="onSlideRangeChange($event)">
+                            [singleSlideOffset]="singleSlideOffset"
+                            [noWrap]="!noWrap"
+                            [interval]="false"
+                            [startFromIndex]="2"
+                            (slideRangeChange)="onSlideRangeChange($event)"
+                >
                 <slide *ngFor="let slide of slides; let index=index" >
-                    <div style="margin: 1rem; padding: 1rem; background: #fff;">
-                    <img [src]="slide.image" alt="image slide" class="image-fluid" style="width: 400px; height: 400px;">
+                    <div style="margin: 1rem; padding: 1rem; background:burlywood;">
+                    <img [src]="slide.image" alt="image slide" class="image-fluid">
                 </div>
                 </slide>
                 </carousel>
